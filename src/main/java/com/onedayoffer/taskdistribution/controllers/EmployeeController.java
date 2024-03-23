@@ -39,13 +39,15 @@ public class EmployeeController {
     @ResponseStatus(HttpStatus.OK)
     public void changeTaskStatus(@PathVariable Integer id
                                           /* other PathVariable and RequestParam */ ) {
-        //TaskStatus status = TaskStatus.valueOf(newStatus);
-        //employeeService.changeTaskStatus ...
+        TaskStatus status = TaskStatus.valueOf(newStatus);
+        //не успела к сожалению дописать метод контроллера
+        employeeService.changeTaskStatus(id, status);
     }
 
     @PostMapping("...")
     @ResponseStatus(HttpStatus.CREATED)
     public void postNewTask(/* some params */) {
+        //не успела к сожалению дописать метод контроллера
         //employeeService.postNewTask ...
     }
 }
